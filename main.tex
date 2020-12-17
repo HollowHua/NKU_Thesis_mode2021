@@ -1,0 +1,79 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX program = xelatex
+% !BIB program = biber
+% !TEX TS-program = xelatex
+% !BIB TS-program = biber
+%%
+%%  本模板方式编译: XeLaTeX + biber
+%%
+%%  注意: 在改变编译方式前应先删除 *.toc 和 *.aux 文件
+%%
+\documentclass[12pt,openright]{book}
+
+% 引入NKThesis包
+\usepackage[emptydoublepage]{NKThesis}   % 中文
+%\usepackage[emptydoublepage,English]{NKThesis} % 英文
+
+% 其它包按需添加
+% \usepackage{amsmath}
+% \usepackage{cases}
+% \usepackage{multirow}
+% \usepackage{tocbibind}
+\usepackage{ulem}
+\usepackage{xeCJKfntef} %CJKunderline
+\xeCJKsetup{underline= {format = \color{black}, thickness=0.4pt}} %CJKunderline setting
+
+\usepackage{datetime} %日期
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+% 参考文献
+\addbibresource{nkthesis.bib}
+% 图片文件夹
+\graphicspath{{image/}}
+
+\includeonly{
+	./tex/abstract,
+	./tex/introduction,
+	./tex/relatedwork,
+	./tex/method,
+	./tex/discussion,
+	./tex/summary,
+	./tex/references,
+	./tex/acknowledgements,
+	./tex/appendices,
+	./tex/resume
+}
+\begin{document}
+%  设置基本信息
+%  注意:  逗号`,'是项目分隔符. 如果某一项的值出现逗号, 应放在花括号内, 如 {,}
+%
+\NKTsetup{
+	% 封面设置
+	论文题目(中文) = 我是爱南开的,
+	论文题目(英文) = I Love Nankai,
+	学号           = 19190062,
+	姓名       = 周恩来,
+	年级          = 1919级,
+	学院          = 管理学院,
+	系别          = 政治系,
+	专业          = 国际政治,
+	完成日期      = \today,
+	指导教师       = 张伯苓教授,
+	校外指导教师   = ,
+}
+
+
+\include{./tex/abstract}
+
+\tableofcontents
+
+\include{./tex/introduction}
+\include{./tex/relatedwork}
+\include{./tex/method}
+\include{./tex/discussion}
+\include{./tex/summary}
+
+\include{./tex/references}
+\include{./tex/acknowledgements}
+\include{./tex/appendices}
+
+\end{document}

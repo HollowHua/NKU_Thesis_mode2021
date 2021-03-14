@@ -113,7 +113,8 @@
   \def\NKT@proof{Proof}
 \else
   \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
-  \def\thesection{第\CJKnumber{\arabic{section}}节}
+  % \def\thesection{第\CJKnumber{\arabic{section}}节}
+  \def\thesection{\arabic{chapter}.\arabic{section}}
   \def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
   \def\contentsname{目\hskip 2em录}
   \def\appendixnamenonumber{附录}
@@ -199,10 +200,12 @@
 \def\subsubsection{
   \@startsection{subsubsection}{3}{\z@}{12pt}{6pt}{\subsubsectionformat}}
 
+%标题格式
 \def\sectionspecial{\jiacu}
 \def\partformat{\centering\huge\bfseries}
 \def\chapterformat{\centering\zihaosan\heiti}
-\def\sectionformat{\centering\zihaoxiaosan\heiti}
+% \def\sectionformat{\centering\zihaoxiaosan\heiti}
+\def\sectionformat{\zihaoxiaosan\heiti}
 \def\subsectionformat{\zihaosi\heiti}
 \def\subsubsectionformat{\zihaosi\heiti}
 

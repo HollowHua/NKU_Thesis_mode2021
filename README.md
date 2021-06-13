@@ -52,6 +52,6 @@ xelatex main
 * [VS code](https://code.visualstudio.com/) + [LaTeX-Workshop插件](https://github.com/James-Yu/LaTeX-Workshop)
 
 * **个人比较推荐VSCode + TexLive的编辑器和编译器，安装和配置过程参考知乎文章：[使用VSCode编写LaTeX](https://zhuanlan.zhihu.com/p/38178015)**
-* **其中settings.json中的latex配置，嫌麻烦的可以使用我自己的一套配置(需要修改文件路径)，配置见文件[settings.txt](settings.txt)。**
+* **关于VSCode中settings.json中的latex配置，嫌麻烦的可以使用我自己的一套配置(需要修改文件路径)，配置见文件[settings.txt](settings.txt)。**
 
 # 预祝大家论文通过，顺利毕业！

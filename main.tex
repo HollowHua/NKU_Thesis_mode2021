@@ -15,6 +15,9 @@
 %\usepackage[emptydoublepage,English]{NKThesis} % 英文
 
 % 其它包按需添加
+\usepackage{pifont}
+\usepackage{float}
+\usepackage{hyperref}
 % \usepackage{amsmath}
 % \usepackage{cases}
 % \usepackage{multirow}
@@ -25,13 +28,23 @@
 
 \usepackage{datetime} %日期
 \renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+
 % 参考文献
 \addbibresource{nkthesis.bib}
+
 % 图片文件夹
 \graphicspath{{image/}}
 
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+citecolor=black
+}
+
 \includeonly{
 	./tex/abstract,
+	% ./tex/chapter1,
+	% ./tex/chapter2,
 	./tex/introduction,
 	./tex/relatedwork,
 	./tex/method,
@@ -47,18 +60,17 @@
 %  注意:  逗号`,'是项目分隔符. 如果某一项的值出现逗号, 应放在花括号内, 如 {,}
 %
 \NKTsetup{
-	% 封面设置
-	论文题目(中文) = 我是爱南开的我是爱南开的我是爱南开的我是爱南开的我是爱南开的,
-	论文题目(英文) = I Love Nankai I Love Nankai I Love Nankai,
-	学号           = 19190062,
-	姓名       = 周恩来,
-	年级          = 1919级,
-	学院          = 管理学院,
-	系别          = 政治系,
-	专业          = 国际政治,
-	完成日期      = \today,
-	指导教师       = 张伯苓教授,
-	校外指导教师   = ,
+	% 封面设置(\hskip后跟em为水平空格长度，可以自行调整)
+	论文题目(中文) = 这里是论文题目,
+	论文题目(英文) = This is the topic of your thesis,
+	学号           = \hskip 3em 123456,
+	姓名       = \hskip 3em \ XXX,
+	年级          = \hskip 3em \ 2017级,
+	学院          = \hskip 2em XXXX学院,
+	系别          = \hskip 3.5em （空）,
+	专业          = \hskip 2em XXXXXXXX,
+	指导教师       = \hskip 4em XX,
+	完成日期      = \hskip 1em \today,
 }
 
 
@@ -66,6 +78,8 @@
 
 \tableofcontents
 
+% \include{./tex/chapter1}
+% \include{./tex/chapter2}
 \include{./tex/introduction}
 \include{./tex/relatedwork}
 \include{./tex/method}

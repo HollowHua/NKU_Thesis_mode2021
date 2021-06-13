@@ -113,9 +113,11 @@
   \def\NKT@proof{Proof}
 \else
   \def\chaptername{第\CJKnumber{\arabic{chapter}}章}
-  % \def\thesection{第\CJKnumber{\arabic{section}}节}
-  \def\thesection{\arabic{chapter}.\arabic{section}}
+  \def\thesection{第\CJKnumber{\arabic{section}}节}
   \def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+  % \def\chaptername{\CJKnumber{\arabic{chapter}}}
+  % \def\thesection{（\CJKnumber{\arabic{section}}）}
+  % \def\thesubsection{\arabic{subsection}}
   \def\contentsname{目\hskip 2em录}
   \def\appendixnamenonumber{附录}
   \def\nkrefname{参考文献}
@@ -494,6 +496,7 @@
 \def\NKT@definezihao#1#2#3{
   \def#1{\fontsize{#2}{#3}\selectfont}}
 
+\NKT@definezihao{\zihaojuda}{70}{70}
 \NKT@definezihao{\zihaonku}{35}{35}
 \NKT@definezihao{\zihaochu}{42}{63}
 \NKT@definezihao{\zihaoxiaochu}{36}{44}
